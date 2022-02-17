@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Login</title>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center">Users</h1>
+    <a href="/login">Login as new user</a>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Age</th>
+            <th scope="col">City</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each users}}
+            <tr>
+                <th><a href="/users/{{this.id}}">{{this.id}}</a></th>
+                <th>{{this.firstName}}</th>
+                <td>{{this.lastName}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.age}}</td>
+                <td>{{this.city}}</td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>
